@@ -1,7 +1,7 @@
 import "./rightBar.scss"
 
 function RightBar() {
-	return <div>rightBar</div>
+	return <div className="right-bar">rightBar</div>
 }
 
 export default RightBar

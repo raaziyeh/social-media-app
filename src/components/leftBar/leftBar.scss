@@ -1,0 +1,64 @@
+.left-bar {
+	flex: 2;
+	position: sticky;
+	top: 70px;
+	height: calc(100vh - 70px);
+	overflow: scroll;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.container {
+		.main,
+		.shortcuts {
+			border-bottom: 1px solid #efefef;
+		}
+
+		.main,
+		.shortcuts,
+		.others {
+			h4 {
+				font-weight: 400;
+				color: #666;
+				font-size: 13px;
+				padding: 15px 15px 10px 15px;
+			}
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.item {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				padding: 10px 15px;
+				cursor: pointer;
+				transition: all 0.2s ease-out;
+
+				&:hover {
+					background-color: rgba(153, 109, 198, 0.117);
+				}
+
+				img {
+					width: 20px;
+					height: 20px;
+				}
+
+				span {
+					font-size: 13px;
+					color: #555;
+				}
+			}
+
+			.user {
+				padding-top: 15px;
+			}
+		}
+	}
+}
