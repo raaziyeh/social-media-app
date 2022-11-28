@@ -58,6 +58,10 @@
 
 			.user {
 				padding-top: 15px;
+				img {
+					border-radius: 50%;
+					object-fit: cover;
+				}
 			}
 		}
 	}

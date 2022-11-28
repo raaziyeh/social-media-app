@@ -9,7 +9,6 @@ import market from "../../assets/images/market.png"
 import memories from "../../assets/images/memories.png"
 import messages from "../../assets/images/messages.png"
 import tutorials from "../../assets/images/tutorials.png"
-import user from "../../assets/images/user.png"
 import videos from "../../assets/images/videos.png"
 import watch from "../../assets/images/watch.png"
 
@@ -22,7 +21,10 @@ function LeftBar() {
 				<div className="main">
 					<ul>
 						<li className="item user">
-							<img src={user} alt="user" />
+							<img
+								src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"
+								alt="user"
+							/>
 							<span>User</span>
 						</li>
 						<li className="item">
