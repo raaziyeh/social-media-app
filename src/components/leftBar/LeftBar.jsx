@@ -91,40 +91,6 @@ function LeftBar() {
 						</li>
 					</ul>
 				</div>
-				<div className="others">
-					<h4>Others</h4>
-					<ul>
-						<li className="item">
-							<img src={fund} alt="fund" />
-							<span>Fundraiser</span>
-						</li>
-						<li className="item">
-							<img src={tutorials} alt="tutorials" />
-							<span>Tutorials</span>
-						</li>
-						<li className="item">
-							<img src={courses} alt="courses" />
-							<span>Courses</span>
-						</li>
-					</ul>
-				</div>
-				<div className="others">
-					<h4>Others</h4>
-					<ul>
-						<li className="item">
-							<img src={fund} alt="fund" />
-							<span>Fundraiser</span>
-						</li>
-						<li className="item">
-							<img src={tutorials} alt="tutorials" />
-							<span>Tutorials</span>
-						</li>
-						<li className="item">
-							<img src={courses} alt="courses" />
-							<span>Courses</span>
-						</li>
-					</ul>
-				</div>
 			</div>
 		</div>
 	)

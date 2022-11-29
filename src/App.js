@@ -12,14 +12,17 @@ import LeftBar from "./components/leftBar/LeftBar"
 import RightBar from "./components/rightBar/RightBar"
 import Home from "./pages/home/Home"
 import Profile from "./pages/profile/Profile"
-import "./app.scss"
+import { useDarkMode } from "./context/theme"
+import "./style.css"
 
 //temporary
 let authorizedUser = true
 
 const Layout = () => {
+	const darkMode = useDarkMode()
+
 	return (
-		<div>
+		<div theme={darkMode ? "dark" : "light"}>
 			<Navbar />
 			<div style={{ display: "flex" }}>
 				<LeftBar />

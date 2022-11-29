@@ -1,9 +1,12 @@
+@import "../../style.css";
+
 .left-bar {
 	flex: 2;
 	position: sticky;
 	top: 70px;
 	height: calc(100vh - 70px);
 	overflow: scroll;
+	background-color: var(--bg);
 
 	&::-webkit-scrollbar {
 		display: none;
@@ -12,7 +15,7 @@
 	.container {
 		.main,
 		.shortcuts {
-			border-bottom: 1px solid #efefef;
+			border-bottom: 1px solid var(--border);
 		}
 
 		.main,
@@ -20,7 +23,7 @@
 		.others {
 			h4 {
 				font-weight: 400;
-				color: #666;
+				color: var(--textColorSoft);
 				font-size: 13px;
 				padding: 15px 15px 10px 15px;
 			}
@@ -52,7 +55,7 @@
 
 				span {
 					font-size: 13px;
-					color: #555;
+					color: var(--textColorSoft);
 				}
 			}
 
