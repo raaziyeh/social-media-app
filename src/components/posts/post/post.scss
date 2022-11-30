@@ -1,0 +1,181 @@
+@import "../../../style.css";
+
+.post {
+	background-color: var(--bg);
+	padding: 20px;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.left {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			img {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+			span {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+
+				.name {
+					color: var(--textColor);
+					font-size: 16px;
+					font-weight: 400;
+					text-decoration: none;
+				}
+
+				.last-seen {
+					color: var(--textColorSoft);
+					font-size: 13px;
+					font-weight: 400;
+				}
+			}
+		}
+
+		.right {
+			color: var(--textColorSoft);
+		}
+	}
+
+	.body {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		p {
+			color: var(--textColor);
+		}
+
+		img {
+			width: 100%;
+			height: 300px;
+			object-fit: cover;
+			margin: auto;
+			border-radius: 3px;
+		}
+	}
+
+	.footer {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+
+		div {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			color: var(--textColor);
+			cursor: pointer;
+
+			.icon {
+				font-size: 18px;
+			}
+
+			.like {
+				font-size: 18px;
+				color: red;
+			}
+
+			span {
+				font-size: 14px;
+				font-weight: 400;
+			}
+		}
+	}
+
+	.comments {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		.new-comment {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			img {
+				width: 35px;
+				height: 35px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+			form {
+				width: 90%;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				input {
+					flex: 11;
+					padding: 5px;
+					border: 1px solid var(--border);
+					background-color: transparent;
+					color: var(--textColor);
+					width: 300px;
+					border-radius: 3px;
+
+					&::placeholder {
+						font-size: 12px;
+					}
+				}
+
+				button {
+					flex: 1;
+					padding: 5px;
+					color: white;
+					background-color: #5271ff;
+					font-size: 13px;
+					border: none;
+					border-radius: 2px;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.comment {
+			display: flex;
+			gap: 20px;
+
+			img {
+				flex: 1;
+				max-width: 35px;
+				height: 35px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+			div {
+				flex: 10;
+				.name {
+					color: var(--textColor);
+					font-weight: 500;
+				}
+
+				.comment-text {
+					color: var(--textColorSoft);
+					font-size: 14px;
+				}
+			}
+			.date {
+				flex: 2;
+				font-size: 10px;
+				color: var(--textColorSoft);
+				align-self: center;
+			}
+		}
+	}
+}
