@@ -45,7 +45,7 @@
 				transition: all 0.2s ease-out;
 
 				&:hover {
-					background-color: rgba(153, 109, 198, 0.117);
+					background-color: var(--bgSoft);
 				}
 
 				img {
