@@ -1,0 +1,56 @@
+@import "../../style.css";
+
+.stories {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 30px;
+
+	.story,
+	.user-story {
+		flex: 1;
+		border-radius: 10px;
+		overflow: hidden;
+		position: relative;
+		height: 200px;
+
+		img {
+			border-radius: 10px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			filter: brightness(0.9);
+		}
+
+		span {
+			position: absolute;
+			z-index: 3;
+			bottom: 10px;
+			left: 10px;
+			color: white;
+			font-size: 14px;
+		}
+	}
+
+	.user-story {
+		button {
+			border: none;
+			outline: none;
+			background-color: #5271ff;
+			border-radius: 50%;
+			padding: 3px;
+			position: absolute;
+			bottom: 30px;
+			left: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+
+			.add-icon {
+				color: white;
+				font-size: 16px;
+				font-weight: 700;
+			}
+		}
+	}
+}
