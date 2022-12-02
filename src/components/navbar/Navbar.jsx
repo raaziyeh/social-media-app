@@ -10,8 +10,10 @@ import { Link } from "react-router-dom"
 import { useToggleDarkMode } from "../../context/theme"
 import { useDarkMode } from "../../context/theme"
 import "./navbar.scss"
+import { useState } from "react"
 
 function Navbar() {
+	const [showSearchInput, setShowSearchInput] = useState(false)
 	const toggleDarkMode = useToggleDarkMode()
 	const darkMode = useDarkMode()
 
@@ -30,8 +32,22 @@ function Navbar() {
 				)}
 				<GridViewOutlinedIcon className="icon" />
 				<div className="search">
-					<SearchOutlinedIcon className="icon" />
-					<input type="text" placeholder="Search..." />
+					<SearchOutlinedIcon
+						className="icon"
+						onClick={() => setShowSearchInput((prev) => !prev)}
+					/>
+					<input
+						type="text"
+						placeholder="Search..."
+						className="desktop-search"
+					/>
+					{showSearchInput && (
+						<input
+							type="text"
+							placeholder="Search..."
+							className="mobile-search"
+						/>
+					)}
 				</div>
 			</div>
 			<div className="right">

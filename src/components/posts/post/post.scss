@@ -1,8 +1,12 @@
 @import "../../../style.css";
+@import "../../../mixins.scss";
 
 .post {
 	background-color: var(--bg);
 	padding: 20px;
+	@include mobile {
+		padding: 10px;
+	}
 	border-radius: 15px;
 	display: flex;
 	flex-direction: column;
@@ -62,6 +66,9 @@
 		img {
 			width: 100%;
 			height: 300px;
+			@include mobile {
+				height: 200px;
+			}
 			object-fit: cover;
 			margin: auto;
 			border-radius: 3px;
@@ -100,17 +107,29 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+		@include mobile {
+			width: 100%;
+		}
 
 		.new-comment {
 			display: flex;
 			align-items: center;
 			gap: 20px;
+			@include mobile {
+				width: 100%;
+				gap: 10px;
+				justify-content: space-between;
+			}
 
 			img {
 				width: 35px;
 				height: 35px;
 				border-radius: 50%;
 				object-fit: cover;
+				@include mobile {
+					width: 30px;
+					height: 30px;
+				}
 			}
 
 			form {
@@ -118,6 +137,9 @@
 				display: flex;
 				align-items: center;
 				gap: 10px;
+				@include mobile {
+					justify-content: space-between;
+				}
 
 				input {
 					flex: 11;
@@ -127,6 +149,10 @@
 					color: var(--textColor);
 					width: 300px;
 					border-radius: 3px;
+					@include mobile {
+						flex: none;
+						width: 200px;
+					}
 
 					&::placeholder {
 						font-size: 12px;
@@ -142,6 +168,10 @@
 					border: none;
 					border-radius: 2px;
 					cursor: pointer;
+					@include mobile {
+						font-size: 12px;
+						flex: none;
+					}
 				}
 			}
 		}
@@ -149,6 +179,11 @@
 		.comment {
 			display: flex;
 			gap: 20px;
+			@include mobile {
+				width: 100%;
+				gap: 10px;
+				justify-content: space-between;
+			}
 
 			img {
 				flex: 1;
@@ -156,25 +191,46 @@
 				height: 35px;
 				border-radius: 50%;
 				object-fit: cover;
+				@include mobile {
+					width: 30px;
+					height: 30px;
+					flex: none;
+				}
 			}
 
 			div {
 				flex: 10;
+				@include mobile {
+					flex: 6;
+				}
+
 				.name {
 					color: var(--textColor);
 					font-weight: 500;
+					@include mobile {
+						font-size: 16px;
+					}
 				}
 
 				.comment-text {
 					color: var(--textColorSoft);
 					font-size: 14px;
+					overflow-wrap: normal;
+					@include mobile {
+						font-size: 12px;
+					}
 				}
 			}
+
 			.date {
 				flex: 2;
 				font-size: 10px;
 				color: var(--textColorSoft);
 				align-self: center;
+				@include mobile {
+					flex: none;
+					font-size: 9px;
+				}
 			}
 		}
 	}

@@ -1,6 +1,14 @@
 @import "../../style.css";
+@import "../../mixins.scss";
 
 .right-bar {
+	@include tablet {
+		display: none;
+	}
+	@include mobile {
+		display: none;
+	}
+
 	flex: 3;
 	position: sticky;
 	top: 70px;

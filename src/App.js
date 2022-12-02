@@ -1,7 +1,6 @@
 import {
 	createBrowserRouter,
 	RouterProvider,
-	Route,
 	Outlet,
 	Navigate,
 } from "react-router-dom"
@@ -13,6 +12,7 @@ import RightBar from "./components/rightBar/RightBar"
 import Home from "./pages/home/Home"
 import Profile from "./pages/profile/Profile"
 import { useDarkMode } from "./context/theme"
+import "./app.scss"
 import "./style.css"
 
 //temporary
@@ -26,10 +26,9 @@ const Layout = () => {
 			<Navbar />
 			<div style={{ display: "flex" }}>
 				<LeftBar />
-				<div style={{ flex: 6 }}>
+				<div className="outlet">
 					<Outlet />
 				</div>
-
 				<RightBar />
 			</div>
 		</div>

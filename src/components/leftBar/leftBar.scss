@@ -1,6 +1,10 @@
 @import "../../style.css";
+@import "../../mixins.scss";
 
 .left-bar {
+	@include mobile {
+		display: none;
+	}
 	flex: 2;
 	position: sticky;
 	top: 70px;

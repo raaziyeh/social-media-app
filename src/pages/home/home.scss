@@ -1,8 +1,16 @@
 @import "../../style.css";
+@import "../../mixins.scss";
 
 .home {
 	background-color: var(--bgSoft);
 	min-height: calc(100vh - 70px);
 	padding: 20px 70px;
 	color: var(--textColor);
+	@include tablet {
+		padding: 20px;
+	}
+	@include mobile {
+		padding: 10;
+		box-sizing: border-box;
+	}
 }

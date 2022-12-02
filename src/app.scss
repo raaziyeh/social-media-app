@@ -1,0 +1,10 @@
+@import "./mixins.scss";
+
+.outlet {
+	flex: 6;
+
+	@include mobile {
+		flex: none;
+		width: 100vw;
+	}
+}
