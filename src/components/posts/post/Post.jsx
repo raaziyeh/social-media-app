@@ -3,6 +3,7 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined"
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined"
+import Share from "../../share/Share"
 import "./post.scss"
 import { useState } from "react"
 import { Link } from "react-router-dom"
@@ -10,8 +11,11 @@ import { Link } from "react-router-dom"
 const Post = ({ post }) => {
 	const [isLiked, setIsLiked] = useState(true)
 	const [showComments, setShowComments] = useState(false)
+	const [showShare, setShowShare] = useState(false)
 
 	const toggleLike = () => setIsLiked((prev) => !prev)
+	const toggleComments = () => setShowComments((prev) => !prev)
+	const toggleShare = () => setShowShare((prev) => !prev)
 
 	return (
 		<div className="post">
@@ -41,11 +45,11 @@ const Post = ({ post }) => {
 					{isLiked && <FavoriteIcon className="like" onClick={toggleLike} />}
 					<span>32 Likes</span>
 				</div>
-				<div className="div" onClick={() => setShowComments((prev) => !prev)}>
+				<div className="div" onClick={toggleComments}>
 					<ChatBubbleOutlineOutlinedIcon className="icon" />
 					<span>11 Comments</span>
 				</div>
-				<div className="div">
+				<div className="div" onClick={toggleShare}>
 					<ShareOutlinedIcon className="icon" />
 					<span>Share</span>
 				</div>
@@ -76,6 +80,7 @@ const Post = ({ post }) => {
 					})}
 				</div>
 			)}
+			{showShare && <Share />}
 		</div>
 	)
 }
