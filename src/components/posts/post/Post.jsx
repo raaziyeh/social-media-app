@@ -43,15 +43,19 @@ const Post = ({ post }) => {
 						<FavoriteBorderOutlinedIcon className="icon" onClick={toggleLike} />
 					)}
 					{isLiked && <FavoriteIcon className="like" onClick={toggleLike} />}
-					<span>32 Likes</span>
+					<span>
+						32 <span className="post-action">Likes</span>
+					</span>
 				</div>
 				<div className="div" onClick={toggleComments}>
 					<ChatBubbleOutlineOutlinedIcon className="icon" />
-					<span>11 Comments</span>
+					<span>
+						11 <span className="post-action">Comments</span>
+					</span>
 				</div>
 				<div className="div" onClick={toggleShare}>
 					<ShareOutlinedIcon className="icon" />
-					<span>Share</span>
+					<span className="post-action">Share</span>
 				</div>
 			</div>
 			{showComments && (

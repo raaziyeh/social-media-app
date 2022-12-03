@@ -99,6 +99,18 @@
 			span {
 				font-size: 14px;
 				font-weight: 400;
+
+				&.post-action {
+					@include mobile {
+						display: none;
+					}
+				}
+
+				.post-action {
+					@include mobile {
+						display: none;
+					}
+				}
 			}
 		}
 	}
