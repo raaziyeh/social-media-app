@@ -4,6 +4,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite"
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined"
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined"
 import Share from "../../share/Share"
+import Comments from "../../comments/Comments"
 import "./post.scss"
 import { useState } from "react"
 import { Link } from "react-router-dom"
@@ -58,32 +59,7 @@ const Post = ({ post }) => {
 					<span className="post-action">Share</span>
 				</div>
 			</div>
-			{showComments && (
-				<div className="comments">
-					<div className="new-comment">
-						<img
-							src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"
-							alt="avatar"
-						/>
-						<form>
-							<input type="text" placeholder="write a comment" />
-							<button>Send</button>
-						</form>
-					</div>
-					{post.comments.map((comment) => {
-						return (
-							<div className="comment">
-								<img src={comment.img} alt="avatar" />
-								<div>
-									<span className="name">{comment.name}</span>
-									<p className="comment-text">{comment.text}</p>
-								</div>
-								<span className="date">1 hour ago</span>
-							</div>
-						)
-					})}
-				</div>
-			)}
+			{showComments && <Comments comments={post.comments} />}
 			{showShare && <Share />}
 		</div>
 	)
