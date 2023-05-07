@@ -89,9 +89,18 @@
 			display: none;
 		}
 
-		.icon {
-			font-size: 20px;
-			color: var(--textColor);
+		nav {
+			ul {
+				list-style: none;
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				gap: 15px;
+				.icon {
+					font-size: 20px;
+					color: var(--textColor);
+				}
+			}
 		}
 
 		.user {

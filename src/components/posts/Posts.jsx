@@ -1,4 +1,4 @@
-import Post from "./post/Post"
+import PostItem from "./postItem/PostItem"
 import "./posts.scss"
 
 // temporary
@@ -7,10 +7,9 @@ const posts = [
 		id: 1,
 		name: "Joe Doe",
 		userId: 1,
-		profilePic:
-			"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
+		profilePic: "/images/contact_avatar.jpeg",
 		desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-		img: "https://images.pexels.com/photos/5778899/pexels-photo-5778899.jpeg?auto=compress&cs=tinysrgb&w=600",
+		img: "/images/post_1.jpeg",
 		comments: [
 			{
 				id: 1,
@@ -35,10 +34,9 @@ const posts = [
 		id: 2,
 		name: "Joe Doe",
 		userId: 1,
-		profilePic:
-			"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
+		profilePic: "/images/contact_avatar.jpeg",
 		desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-		img: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600",
+		img: "/images/post_2.jpeg",
 		comments: [
 			{
 				id: 1,
@@ -63,10 +61,9 @@ const posts = [
 		id: 3,
 		name: "Joe Doe",
 		userId: 1,
-		profilePic:
-			"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600",
+		profilePic: "/images/contact_avatar.jpeg",
 		desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-		img: "https://images.pexels.com/photos/5778899/pexels-photo-5778899.jpeg?auto=compress&cs=tinysrgb&w=600",
+		img: "/images/post_1.jpeg",
 		comments: [
 			{
 				id: 1,
@@ -91,11 +88,13 @@ const posts = [
 
 const Posts = () => {
 	return (
-		<div className="posts">
-			{posts.map((post) => (
-				<Post post={post} key={post.id} />
-			))}
-		</div>
+		<section className="posts">
+			<ul>
+				{posts.map((post) => (
+					<PostItem post={post} key={post.id} />
+				))}
+			</ul>
+		</section>
 	)
 }
 

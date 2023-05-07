@@ -6,7 +6,7 @@ import {
 } from "react-router-dom"
 import Login from "./pages/login/Login"
 import Register from "./pages/register/Register"
-import Navbar from "./components/navbar/Navbar"
+import Header from "./components/header/Header"
 import LeftBar from "./components/leftBar/LeftBar"
 import RightBar from "./components/rightBar/RightBar"
 import Home from "./pages/home/Home"
@@ -22,8 +22,8 @@ const Layout = () => {
 	const darkMode = useDarkMode()
 
 	return (
-		<div theme={darkMode ? "dark" : "light"}>
-			<Navbar />
+		<div className={darkMode ? "dark" : "light"}>
+			<Header />
 			<div style={{ display: "flex" }}>
 				<LeftBar />
 				<div className="outlet">

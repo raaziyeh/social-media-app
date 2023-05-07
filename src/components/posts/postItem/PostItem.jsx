@@ -5,11 +5,11 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined"
 import Share from "../../share/Share"
 import Comments from "../../comments/Comments"
-import "./post.scss"
+import "./postItem.scss"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-const Post = ({ post }) => {
+const PostItem = ({ post }) => {
 	const [isLiked, setIsLiked] = useState(true)
 	const [showComments, setShowComments] = useState(false)
 	const [showShare, setShowShare] = useState(false)
@@ -19,7 +19,7 @@ const Post = ({ post }) => {
 	const toggleShare = () => setShowShare((prev) => !prev)
 
 	return (
-		<div className="post">
+		<article className="post">
 			<div className="header">
 				<div className="left">
 					<img src={post.profilePic} alt="avatar" />
@@ -61,8 +61,8 @@ const Post = ({ post }) => {
 			</div>
 			{showComments && <Comments comments={post.comments} />}
 			{showShare && <Share />}
-		</div>
+		</article>
 	)
 }
 
-export default Post
+export default PostItem

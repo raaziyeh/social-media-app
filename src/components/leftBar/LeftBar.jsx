@@ -16,15 +16,12 @@ import "./leftBar.scss"
 
 function LeftBar() {
 	return (
-		<div className="left-bar">
+		<nav className="left-bar">
 			<div className="container">
-				<div className="main">
+				<section className="main">
 					<ul>
 						<li className="item user">
-							<img
-								src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"
-								alt="user"
-							/>
+							<img src="/images/user_avatar.jpeg" alt="user" />
 							<span>User</span>
 						</li>
 						<li className="item">
@@ -48,8 +45,8 @@ function LeftBar() {
 							<span>Memories</span>
 						</li>
 					</ul>
-				</div>
-				<div className="shortcuts">
+				</section>
+				<section className="shortcuts">
 					<h4>Your shortcuts</h4>
 					<ul>
 						<li className="item">
@@ -73,8 +70,8 @@ function LeftBar() {
 							<span>Messages</span>
 						</li>
 					</ul>
-				</div>
-				<div className="others">
+				</section>
+				<section className="others">
 					<h4>Others</h4>
 					<ul>
 						<li className="item">
@@ -90,9 +87,9 @@ function LeftBar() {
 							<span>Courses</span>
 						</li>
 					</ul>
-				</div>
+				</section>
 			</div>
-		</div>
+		</nav>
 	)
 }
 

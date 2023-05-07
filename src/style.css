@@ -7,7 +7,7 @@
 	--logo: darkblue;
 }
 
-[theme="dark"] {
+.dark {
 	--textColor: whitesmoke;
 	--textColorSoft: lightgray;
 	--bg: #222;

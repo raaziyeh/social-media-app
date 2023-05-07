@@ -3,7 +3,7 @@ import "./register.scss"
 
 const Register = () => {
 	return (
-		<div className="register">
+		<main className="register">
 			<div className="card">
 				<div className="left">
 					<h1>Register</h1>
@@ -29,7 +29,7 @@ const Register = () => {
 					</Link>
 				</div>
 			</div>
-		</div>
+		</main>
 	)
 }
 

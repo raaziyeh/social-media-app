@@ -9,16 +9,16 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import { Link } from "react-router-dom"
 import { useToggleDarkMode } from "../../context/theme"
 import { useDarkMode } from "../../context/theme"
-import "./navbar.scss"
+import "./header.scss"
 import { useState } from "react"
 
-function Navbar() {
+function Header() {
 	const [showSearchInput, setShowSearchInput] = useState(false)
 	const toggleDarkMode = useToggleDarkMode()
 	const darkMode = useDarkMode()
 
 	return (
-		<div className="navbar">
+		<header className="navbar">
 			<div className="left">
 				<Link to="/" style={{ textDecoration: "none" }}>
 					<span className="logo">ReactSocial</span>
@@ -51,19 +51,29 @@ function Navbar() {
 				</div>
 			</div>
 			<div className="right">
-				<PersonOutlinedIcon className="icon" />
-				<EmailOutlinedIcon className="icon" />
-				<NotificationsNoneOutlinedIcon className="icon" />
+				<nav>
+					<ul>
+						<li>
+							<PersonOutlinedIcon className="icon" />
+						</li>
+						<li>
+							<EmailOutlinedIcon className="icon" />
+						</li>
+						<li>
+							<NotificationsNoneOutlinedIcon className="icon" />
+						</li>
+					</ul>
+				</nav>
 				<div className="user">
 					<img
-						src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"
+						src="/images/user_avatar.jpeg"
 						alt="avatar"
 					/>
 					<span>Jane Doe</span>
 				</div>
 			</div>
-		</div>
+		</header>
 	)
 }
 
-export default Navbar
+export default Header

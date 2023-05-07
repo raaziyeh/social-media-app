@@ -12,7 +12,7 @@ import "./profile.scss"
 
 const Profile = () => {
 	return (
-		<div className="profile">
+		<main className="profile">
 			<div className="profile-header">
 				<img
 					className="cover"
@@ -67,7 +67,7 @@ const Profile = () => {
 					<Posts />
 				</div>
 			</div>
-		</div>
+		</main>
 	)
 }
 
