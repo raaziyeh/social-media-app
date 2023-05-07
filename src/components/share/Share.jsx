@@ -4,15 +4,20 @@ import Location from "../../assets/images/location.png"
 import Friend from "../../assets/images/friends.png"
 
 const Share = () => {
+	//temporary
+	const user = {
+		firstName: "Jane"
+	}
+
 	return (
 		<div className="share">
 			<div className="container">
 				<div className="top">
 					<img
-						src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"
+						src="/images/user_avatar.jpeg"
 						alt="avatar"
 					/>
-					<input type="text" placeholder="What's on your mind Jane?" />
+					<input type="text" placeholder={`What's on your mind ${user.firstName}?`} />
 				</div>
 				<hr />
 				<div className="bottom">

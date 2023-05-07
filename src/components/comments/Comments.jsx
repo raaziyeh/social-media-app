@@ -5,7 +5,7 @@ const Comments = (props) => {
 		<div className="comments">
 			<div className="new-comment">
 				<img
-					src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600"
+					src="/images/user_avatar.jpeg"
 					alt="avatar"
 				/>
 				<form>

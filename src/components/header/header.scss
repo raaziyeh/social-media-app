@@ -7,48 +7,48 @@
 	left: 0;
 	z-index: 100;
 	background-color: var(--bg);
-	padding: 10px 20px;
-	height: 50px;
+	padding: 0.625rem 1.25rem;
+	height: 3rem;
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid var(--border);
 	@include mobile {
-		// width: 100%;
+		width: 100%;
 	}
 
 	.left {
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
-		gap: 15px;
+		gap: 1rem;
 		@include mobile {
 			justify-content: space-between;
-			gap: 30px;
+			gap: 2rem;
 		}
 
 		.logo {
 			font-weight: bold;
-			font-size: 20px;
+			font-size: 1.25rem;
 			color: var(--logo);
 		}
 
 		.icon {
-			font-size: 20px;
+			font-size: 1.25rem;
 			color: var(--textColor);
 		}
 
 		.search {
 			display: flex;
 			align-items: center;
-			gap: 10px;
+			gap: 0.625rem;
 			border: 1px solid var(--border);
-			padding: 5px;
+			padding: 0.3rem;
 			border-radius: 5px;
 
 			.desktop-search {
 				border: none;
 				outline: none;
-				width: 500px;
+				width: 30rem;
 				background: transparent;
 				color: var(--textColor);
 				@include tablet {
@@ -66,9 +66,9 @@
 				width: 100%;
 				background: var(--bg);
 				color: var(--textColor);
-				padding: 10px;
+				padding: 0.625rem;
 				position: absolute;
-				top: 70px;
+				top: 4.25rem;
 				left: 0;
 				@include mobile {
 					display: block;
@@ -81,9 +81,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
-		gap: 15px;
+		gap: 1rem;
 		@include tablet {
-			gap: 10px;
+			gap: 0.625rem;
 		}
 		@include mobile {
 			display: none;
@@ -95,9 +95,9 @@
 				display: flex;
 				align-items: center;
 				justify-content: space-evenly;
-				gap: 15px;
+				gap: 1rem;
 				.icon {
-					font-size: 20px;
+					font-size: 1.25rem;
 					color: var(--textColor);
 				}
 			}
@@ -106,7 +106,7 @@
 		.user {
 			display: flex;
 			align-items: center;
-			gap: 10px;
+			gap: 0.625rem;
 			font-weight: 500;
 			color: var(--textColor);
 			@include tablet {
@@ -114,8 +114,8 @@
 			}
 
 			img {
-				width: 30px;
-				height: 30px;
+				width: 2rem;
+				height: 2rem;
 				border-radius: 50%;
 				object-fit: cover;
 			}

@@ -3,14 +3,14 @@
 
 .profile {
 	background-color: var(--bgSoft);
-	min-height: calc(100vh - 70px);
+	min-height: calc(100vh - 4.5rem);
 
 	.profile-header {
 		width: 100%;
-		height: 300px;
+		height: 18.5rem;
 		position: relative;
 		@include mobile {
-			height: 200px;
+			height: 12.5rem;
 		}
 
 		.cover {
@@ -25,41 +25,41 @@
 			left: 0;
 			right: 0;
 			margin: auto;
-			top: 170px;
-			width: 200px;
-			height: 200px;
+			top: 10.5rem;
+			width: 12.5rem;
+			height: 12.5rem;
 			border-radius: 50%;
 			object-fit: cover;
 			@include mobile {
-				width: 180px;
-				height: 180px;
-				top: 90px;
+				width: 10.5rem;
+				height: 10.5rem;
+				top: 5.4rem;
 			}
 		}
 	}
 
 	.profile-container {
-		padding: 20px 70px;
+		padding: 1.25rem 4.5rem;
 		@include tablet {
-			padding: 20px;
+			padding: 1.25rem;
 		}
 		@include mobile {
-			padding: 10px;
+			padding: 0.625rem;
 		}
 
 		.user-info {
 			display: flex;
 			align-items: center;
-			padding: 70px 30px;
-			margin-bottom: 30px;
-			height: 100px;
+			padding: 4.5rem 2rem;
+			margin-bottom: 2rem;
+			height: 6rem;
 			border-radius: 15px;
 			background-color: var(--bg);
 			box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 			@include mobile {
-				padding: 10px;
+				padding: 0.625rem;
 				height: 30vh;
-				margin-top: 30px;
+				margin-top: 2rem;
 				flex-direction: column;
 			}
 
@@ -67,19 +67,19 @@
 				flex: 1;
 				display: flex;
 				align-items: center;
-				gap: 5px;
+				gap: 0.4rem;
 				color: var(--textColorSoft);
 				@include tablet {
 					flex-wrap: wrap;
 				}
 				@include mobile {
-					gap: 20px;
+					gap: 1.25rem;
 				}
 
 				a {
 					color: var(--textColorSoft);
 					.icon {
-						font-size: 25px;
+						font-size: 1.5rem;
 					}
 				}
 			}
@@ -88,13 +88,13 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				gap: 15px;
+				gap: 1rem;
 				width: 50%;
 				color: var(--textColor);
 
 				.name {
 					font-weight: 500;
-					font-size: 28px;
+					font-size: 1.75rem;
 				}
 
 				.contact {
@@ -102,29 +102,29 @@
 					justify-content: space-between;
 					align-items: center;
 					width: 100%;
-					max-width: 200px;
+					max-width: 12.5rem;
 
 					.location,
 					.web {
 						display: flex;
 						align-items: center;
-						gap: 4px;
+						gap: 0.25rem;
 
 						.icon {
-							font-size: 15px;
+							font-size: 1.1rem;
 						}
 
 						span {
-							font-size: 12px;
+							font-size: 0.75rem;
 						}
 					}
 				}
 
 				button {
-					padding: 8px 15px;
+					padding: 0.5rem 1.5rem;
 					color: white;
 					background-color: #5271ff;
-					font-size: 14px;
+					font-size: 0.9rem;
 					border: none;
 					border-radius: 4px;
 					cursor: pointer;
@@ -136,11 +136,11 @@
 				justify-content: flex-end;
 				display: flex;
 				align-items: center;
-				gap: 5px;
+				gap: 0.3rem;
 				color: var(--textColorSoft);
 
 				.icon {
-					font-size: 18px;
+					font-size: 1.15rem;
 				}
 			}
 		}

@@ -12,8 +12,9 @@ import RightBar from "./components/rightBar/RightBar"
 import Home from "./pages/home/Home"
 import Profile from "./pages/profile/Profile"
 import { useDarkMode } from "./context/theme"
-import "./app.scss"
 import "./style.css"
+import "./app.scss"
+
 
 //temporary
 let authorizedUser = true

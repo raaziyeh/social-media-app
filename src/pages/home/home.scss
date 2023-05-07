@@ -4,13 +4,13 @@
 .home {
 	background-color: var(--bgSoft);
 	min-height: calc(100vh - 70px);
-	padding: 20px 70px;
+	padding: 1.25rem 4rem;
 	color: var(--textColor);
 	@include tablet {
-		padding: 20px;
+		padding: 1.25rem;
 	}
 	@include mobile {
-		padding: 10;
+		padding: 0.625rem;
 		box-sizing: border-box;
 	}
 }

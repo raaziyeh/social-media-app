@@ -3,11 +3,11 @@
 
 .stories {
 	display: flex;
-	gap: 10px;
-	margin-bottom: 30px;
+	gap: 0.625rem;
+	margin-bottom: 2rem;
 	@include mobile {
-		margin-top: 5px;
-		margin-bottom: 20px;
+		margin-top: 0.3rem;
+		margin-bottom: 1.25rem;
 		justify-content: space-between;
 	}
 
@@ -19,8 +19,8 @@
 			border-radius: 50%;
 			padding: 3px;
 			position: absolute;
-			bottom: 30px;
-			left: 10px;
+			bottom: 2rem;
+			left: 0.625rem;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -32,16 +32,16 @@
 				bottom: 0;
 				margin: auto;
 				padding: 0;
-				width: 30px;
-				height: 30px;
+				width: 2rem;
+				height: 2rem;
 			}
 
 			.add-icon {
 				color: white;
-				font-size: 16px;
+				font-size: 1rem;
 				font-weight: 700;
 				@include mobile {
-					font-size: 18px;
+					font-size: 1.2rem;
 				}
 			}
 		}
@@ -53,14 +53,14 @@
 		border-radius: 10px;
 		overflow: hidden;
 		position: relative;
-		height: 200px;
+		height: 12.5rem;
 		@include tablet {
-			height: 150px;
+			height: 10rem;
 		}
 		@include mobile {
 			flex: none;
-			height: 60px;
-			width: 60px;
+			height: 4rem;
+			width: 4rem;
 		}
 
 		img {
@@ -69,8 +69,8 @@
 			height: 100%;
 			object-fit: cover;
 			@include mobile {
-				width: 60px;
-				height: 60px;
+				width: 4rem;
+				height: 4rem;
 				border-radius: 50%;
 				margin: auto;
 			}
@@ -79,10 +79,10 @@
 		span {
 			position: absolute;
 			z-index: 3;
-			bottom: 10px;
-			left: 10px;
+			bottom: 0.625rem;
+			left: 0.625rem;
 			color: white;
-			font-size: 14px;
+			font-size: 0.85rem;
 			@include mobile {
 				display: none;
 			}
@@ -92,6 +92,6 @@
 	ul {
 		list-style: none;
 		display: flex;
-		gap: 10px;
+		gap: 0.6rem;
 	}
 }

@@ -6,25 +6,25 @@
 	border-radius: 20px;
 	background-color: var(--bg);
 	color: var(--textColor);
-	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
 
 	.container {
-		padding: 20px;
+		padding: 1.25rem;
 		@include mobile {
-			padding: 10px;
+			padding: 0.625rem;
 		}
 
 		.top {
 			display: flex;
 			align-items: center;
-			gap: 20px;
+			gap: 1.25rem;
 			@include mobile {
-				gap: 10px;
+				gap: 0.625rem;
 			}
 
 			img {
-				width: 40px;
-				height: 40px;
+				width: 2.5rem;
+				height: 2.5rem;
 				border-radius: 50%;
 				object-fit: cover;
 			}
@@ -32,7 +32,7 @@
 			input {
 				border: none;
 				outline: none;
-				padding: 20px 10px;
+				padding: 2.25rem 0.75rem;
 				background-color: transparent;
 				width: 60%;
 				color: var(--textColor);
@@ -40,7 +40,7 @@
 		}
 
 		hr {
-			margin: 20px 0px;
+			margin: 1.25rem 0px;
 			border: none;
 			height: 0.5px;
 			background-color: var(--border);
@@ -53,26 +53,26 @@
 
 			@include mobile {
 				flex-direction: column;
-				gap: 15px;
+				gap: 1rem;
 			}
 
 			.left {
 				display: flex;
 				align-items: center;
-				gap: 20px;
+				gap: 1.25rem;
 
 				.item {
 					display: flex;
 					align-items: center;
-					gap: 10px;
+					gap: 0.625rem;
 					cursor: pointer;
 
 					img {
-						height: 20px;
+						height: 1.25rem;
 					}
 
 					span {
-						font-size: 12px;
+						font-size: 0.75rem;
 						color: gray;
 					}
 				}
@@ -80,14 +80,14 @@
 			.right {
 				button {
 					border: none;
-					padding: 5px;
+					padding: 0.4rem 0.8rem;
 					color: white;
 					cursor: pointer;
 					background-color: #5271ff;
 					border-radius: 3px;
 
 					@include mobile {
-						padding: 5px 10px;
+						padding: 0.3rem 0.6rem;
 					}
 				}
 			}
