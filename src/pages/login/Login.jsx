@@ -53,6 +53,8 @@ const Login = () => {
 							type="password"
 							placeholder="Password"
 							name="password"
+							minLength={6}
+							maxLength={16}
 							onChange={changeHandler}
 							required
 						/>

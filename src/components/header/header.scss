@@ -18,6 +18,7 @@
 		align-items: center;
 		justify-content: space-evenly;
 		gap: 1rem;
+
 		@include mobile {
 			justify-content: space-between;
 			gap: 2rem;
@@ -25,13 +26,46 @@
 
 		.logo {
 			font-weight: bold;
-			font-size: 1.25rem;
+			font-size: 1.5rem;
 			color: var(--logo);
+			@include mobile {
+				font-size: 1.25rem;
+			}
 		}
 
 		.icon {
 			font-size: 1.25rem;
 			color: var(--textColor);
+		}
+
+		.logout-icon,
+		.theme-icon {
+			position: relative;
+		}
+
+		.logout-icon:before,
+		.theme-icon:before {
+			content: attr(data-hover);
+			visibility: hidden;
+			opacity: 0;
+			background-color: var(--bgSoft);
+			color: var(--textColor);
+			font-size: 0.9rem;
+			letter-spacing: 0.01rem;
+			text-align: center;
+			border-radius: 5px;
+			padding: 0.3rem 0.6rem;
+			transition: opacity 0.5s ease-in-out;
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			top: 110%;
+		}
+
+		.logout-icon:hover:before,
+		.theme-icon:hover:before {
+			opacity: 1;
+			visibility: visible;
 		}
 
 		.search {
