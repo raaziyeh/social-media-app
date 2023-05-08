@@ -1,11 +1,14 @@
+import { useContext } from "react"
+import { AuthContext } from "../../context/auth"
 import "./comments.scss"
 
 const Comments = (props) => {
+	const currentUser = useContext(AuthContext).currentUser
 	return (
 		<div className="comments">
 			<div className="new-comment">
 				<img
-					src="/images/user_avatar.jpeg"
+					src={currentUser.avatar}
 					alt="avatar"
 				/>
 				<form>

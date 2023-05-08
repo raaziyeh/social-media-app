@@ -11,18 +11,21 @@ import messages from "../../assets/images/messages.png"
 import tutorials from "../../assets/images/tutorials.png"
 import videos from "../../assets/images/videos.png"
 import watch from "../../assets/images/watch.png"
+import { useContext } from "react"
+import { AuthContext } from "../../context/auth"
 
 import "./leftBar.scss"
 
 function LeftBar() {
+	const currentUser = useContext(AuthContext).currentUser
 	return (
 		<nav className="left-bar">
 			<div className="container">
 				<section className="main">
 					<ul>
 						<li className="item user">
-							<img src="/images/user_avatar.jpeg" alt="user" />
-							<span>User</span>
+							<img src={currentUser.avatar} alt="user" />
+							<span>{`${currentUser.firstName}`}</span>
 						</li>
 						<li className="item">
 							<img src={friends} alt="friends" />

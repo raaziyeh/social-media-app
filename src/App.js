@@ -1,3 +1,4 @@
+import { useContext } from "react"
 import {
 	createBrowserRouter,
 	RouterProvider,
@@ -12,12 +13,10 @@ import RightBar from "./components/rightBar/RightBar"
 import Home from "./pages/home/Home"
 import Profile from "./pages/profile/Profile"
 import { useDarkMode } from "./context/theme"
+import { AuthContext } from "./context/auth"
+
 import "./style.css"
 import "./app.scss"
-
-
-//temporary
-let authorizedUser = true
 
 const Layout = () => {
 	const darkMode = useDarkMode()
@@ -37,7 +36,8 @@ const Layout = () => {
 }
 
 const ProtectedRoute = ({ children }) => {
-	if (!authorizedUser) {
+	const isLoggedIn = useContext(AuthContext).isLoggedIn
+	if (!isLoggedIn) {
 		return <Navigate to="/login" />
 	}
 	return children

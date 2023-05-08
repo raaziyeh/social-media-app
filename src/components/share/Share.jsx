@@ -1,23 +1,22 @@
+import { useContext } from "react"
+import { AuthContext } from "../../context/auth"
 import "./share.scss"
 import Image from "../../assets/images/gallery.png"
 import Location from "../../assets/images/location.png"
 import Friend from "../../assets/images/friends.png"
 
 const Share = () => {
-	//temporary
-	const user = {
-		firstName: "Jane"
-	}
+	const currentUser = useContext(AuthContext).currentUser
 
 	return (
 		<div className="share">
 			<div className="container">
 				<div className="top">
-					<img
-						src="/images/user_avatar.jpeg"
-						alt="avatar"
+					<img src={currentUser.avatar} alt="avatar" />
+					<input
+						type="text"
+						placeholder={`What's on your mind ${currentUser.firstName}?`}
 					/>
-					<input type="text" placeholder={`What's on your mind ${user.firstName}?`} />
 				</div>
 				<hr />
 				<div className="bottom">
@@ -25,7 +24,7 @@ const Share = () => {
 						<input type="file" id="file" style={{ display: "none" }} />
 						<label htmlFor="file">
 							<div className="item">
-								<img src={Image} alt="image-icon" />
+								<img src={Image} alt="sample-icon" />
 								<span>Add Image</span>
 							</div>
 						</label>

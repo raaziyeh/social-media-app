@@ -1,7 +1,29 @@
-import { Link } from "react-router-dom"
+import { useState, useContext } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import { AuthContext } from "../../context/auth"
 import "./login.scss"
 
 const Login = () => {
+	const [formData, setFormData] = useState({ username: "", password: "" })
+	const login = useContext(AuthContext).login
+	const navigate = useNavigate()
+
+	const changeHandler = (e) => {
+		setFormData((prev) => {
+			return {
+				...prev,
+				[e.target.name]: e.target.value,
+			}
+		})
+	}
+
+	const submitHandler = (e) => {
+		e.preventDefault()
+		if (formData.username.trim().length && formData.password.trim().length) {
+			login()
+			navigate("/")
+		}
+	}
 	return (
 		<main className="login">
 			<div className="card">
@@ -19,9 +41,21 @@ const Login = () => {
 				</div>
 				<div className="right">
 					<h1>Login</h1>
-					<form>
-						<input type="text" placeholder="Username" />
-						<input type="password" placeholder="Password" />
+					<form onSubmit={submitHandler}>
+						<input
+							type="text"
+							placeholder="Username"
+							name="username"
+							onChange={changeHandler}
+							required
+						/>
+						<input
+							type="password"
+							placeholder="Password"
+							name="password"
+							onChange={changeHandler}
+							required
+						/>
 						<button>Login</button>
 					</form>
 				</div>

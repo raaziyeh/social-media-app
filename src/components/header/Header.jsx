@@ -10,12 +10,14 @@ import { Link } from "react-router-dom"
 import { useToggleDarkMode } from "../../context/theme"
 import { useDarkMode } from "../../context/theme"
 import "./header.scss"
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { AuthContext } from "../../context/auth"
 
 function Header() {
 	const [showSearchInput, setShowSearchInput] = useState(false)
 	const toggleDarkMode = useToggleDarkMode()
 	const darkMode = useDarkMode()
+	const currentUser = useContext(AuthContext).currentUser
 
 	return (
 		<header className="navbar">
@@ -65,11 +67,8 @@ function Header() {
 					</ul>
 				</nav>
 				<div className="user">
-					<img
-						src="/images/user_avatar.jpeg"
-						alt="avatar"
-					/>
-					<span>Jane Doe</span>
+					<img src={currentUser.avatar} alt="avatar" />
+					<span>{`${currentUser.firstName} ${currentUser.lastName}`}</span>
 				</div>
 			</div>
 		</header>
