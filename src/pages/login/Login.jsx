@@ -59,7 +59,10 @@ const Login = () => {
 							required
 						/>
 						<button>Login</button>
-					</form>
+					</form>					
+					<Link to="/register" className="tablet-only">
+						<button><span>No accounts yet? </span><span>Sign up</span></button>
+					</Link>
 				</div>
 			</div>
 		</main>

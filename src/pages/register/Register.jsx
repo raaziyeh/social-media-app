@@ -15,6 +15,12 @@ const Register = () => {
 						<input type="password" placeholder="Password" />
 						<button>Register</button>
 					</form>
+					<Link to="/login" className="tablet-only">
+						<button>
+							<span>Have an account? </span>
+							<span>Log in</span>
+						</button>
+					</Link>
 				</div>
 				<div className="right">
 					<h2>Hello World.</h2>
