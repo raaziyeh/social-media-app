@@ -1,18 +1,31 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./register.scss"
 
 const Register = () => {
+	const navigate = useNavigate()
+	const submitHandler = (e) => {
+		e.preventDefault()
+		// Validate the form data with JavaScript
+		// Send the form data to backend
+		navigate("/login")
+	}
+
 	return (
 		<main className="register">
 			<div className="card">
 				<div className="left">
 					<h1>Register</h1>
-					<form>
-						<input type="text" placeholder="Name" />
+					<form onSubmit={submitHandler}>
+						<input type="text" placeholder="Name" required />
 						<input type="text" placeholder="Surname" />
-						<input type="email" placeholder="Email" />
-						<input type="text" placeholder="Username" />
-						<input type="password" placeholder="Password" />
+						<input type="email" placeholder="Email" required />
+						<input type="text" placeholder="Username" required />
+						<input
+							type="password"
+							placeholder="Password"
+							minLength={6}
+							maxLength={16}
+						/>
 						<button>Register</button>
 					</form>
 					<Link to="/login" className="tablet-only">
