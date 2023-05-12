@@ -1,12 +1,10 @@
 import { Link, useNavigate } from "react-router-dom"
+import SignupForm from "../../components/signupForm/SignupForm"
 import "./register.scss"
 
 const Register = () => {
 	const navigate = useNavigate()
-	const submitHandler = (e) => {
-		e.preventDefault()
-		// Validate the form data with JavaScript
-		// Send the form data to backend
+	const submitHandler = (values) => {
 		navigate("/login")
 	}
 
@@ -15,19 +13,7 @@ const Register = () => {
 			<div className="card">
 				<div className="left">
 					<h1>Register</h1>
-					<form onSubmit={submitHandler}>
-						<input type="text" placeholder="Name" required />
-						<input type="text" placeholder="Surname" />
-						<input type="email" placeholder="Email" required />
-						<input type="text" placeholder="Username" required />
-						<input
-							type="password"
-							placeholder="Password"
-							minLength={6}
-							maxLength={16}
-						/>
-						<button>Register</button>
-					</form>
+					<SignupForm submitHandler={submitHandler} />
 					<Link to="/login" className="tablet-only">
 						<button>
 							<span>Have an account? </span>
@@ -49,6 +35,7 @@ const Register = () => {
 				</div>
 			</div>
 		</main>
+		// <SignupForm />
 	)
 }
 

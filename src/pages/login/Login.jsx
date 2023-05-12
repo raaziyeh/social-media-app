@@ -2,6 +2,7 @@ import { useState, useContext } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../context/auth"
 import "./login.scss"
+import LoginForm from "../../components/loginForm/LoginForm"
 
 const Login = () => {
 	const [formData, setFormData] = useState({ username: "", password: "" })
@@ -17,13 +18,11 @@ const Login = () => {
 		})
 	}
 
-	const submitHandler = (e) => {
-		e.preventDefault()
-		if (formData.username.trim().length && formData.password.trim().length) {
-			login()
-			navigate("/")
-		}
+	const submitHandler = (values) => {		
+		login()
+		navigate("/")
 	}
+
 	return (
 		<main className="login">
 			<div className="card">
@@ -41,27 +40,12 @@ const Login = () => {
 				</div>
 				<div className="right">
 					<h1>Login</h1>
-					<form onSubmit={submitHandler}>
-						<input
-							type="text"
-							placeholder="Username"
-							name="username"
-							onChange={changeHandler}
-							required
-						/>
-						<input
-							type="password"
-							placeholder="Password"
-							name="password"
-							minLength={6}
-							maxLength={16}
-							onChange={changeHandler}
-							required
-						/>
-						<button>Login</button>
-					</form>					
+					<LoginForm submitHandler={submitHandler} />
 					<Link to="/register" className="tablet-only">
-						<button><span>No accounts yet? </span><span>Sign up</span></button>
+						<button>
+							<span>No accounts yet? </span>
+							<span>Sign up</span>
+						</button>
 					</Link>
 				</div>
 			</div>
